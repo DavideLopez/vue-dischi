@@ -15,17 +15,9 @@
     created() {
         axios
           .get('https://flynn.boolean.careers/exercises/api/array/music')
-          .then((res) =>{
-            console.log(res.data)
-          })
-          .catch((err) =>{
-            console.log("error", err)
-          })
-          .finally(() =>{
-            console.log("finito")
-          });
-    },
-  };
+          
+    }
+  }
   </script>
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
