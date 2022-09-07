@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+#app {
+    background-color: #1e2b3d;
+}
+
 ul, ol, menu {
     list-style: none;
 }
@@ -18,7 +22,8 @@ img {
 }
 
 .container {
-    
+    max-width: 1200px;
     margin: 0 auto;
-    
+    padding: 1rem;
 }
+
