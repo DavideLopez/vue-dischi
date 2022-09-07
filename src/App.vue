@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     
-    <MainHeader msg="Welcome to Your Vue.js App"/>
+    <MainHeader/>
     <MainContent />
   </div>
 </template>
@@ -20,5 +20,5 @@ export default {
 </script>
 
 <style lang="scss">
-
+@import '../src/index.scss'
 </style>
