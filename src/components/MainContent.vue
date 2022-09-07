@@ -1,26 +1,48 @@
 <template>
     <div class="hello bg-secondary">
-        io sono il contenuto
+       <div v-for="listAlbums"> 
+
+         {{ listAlbums }}
+       </div>
+        
     </div>
   </template>
   
   <script>
-   import axios from "axios"
+   import axios from "axios";
 
   export default {
     name: 'MainContent',
     props: {
-      msg: String
+      msg: String,
     },
+    data() {
+      return {
+        listAlbums: []
+
+      }
+      },
+    
     created() {
         axios
-          .get('https://flynn.boolean.careers/exercises/api/array/music')
+          .get("https://flynn.boolean.careers/exercises/api/array/music")
+          .then((res) => {
+            // console.log(res.data);
+            this.listAlbums = res.data;
+          })
+          .catch((err) => {
+            console.log("error", err);
+          })
+          .finally(() => {
+            // console.log("finito");
+          });
           
     }
   }
-  </script>
+         
+</script>
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
-  <style scoped lang="scss">
+<style scoped lang="scss">
   
-  </style>
+</style>
