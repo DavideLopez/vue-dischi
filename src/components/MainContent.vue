@@ -18,6 +18,7 @@
     },
     data() {
       return {
+        poster: [],
         listAlbums: [],
         title: [],
         author: [],
