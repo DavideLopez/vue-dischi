@@ -1,8 +1,8 @@
 <template>
     <div class="hello bg-secondary">
-       <div v-for="listAlbums"> 
-
-         {{ listAlbums }}
+       <div v-for="(poster, i) in listAlbums" :key="i"> 
+           IO SONO IL CONTENUTO
+          {{poster.id}}
        </div>
         
     </div>
@@ -18,7 +18,10 @@
     },
     data() {
       return {
-        listAlbums: []
+        listAlbums: [],
+        title: [],
+        author: [],
+        genre: [],
 
       }
       },
@@ -27,7 +30,7 @@
         axios
           .get("https://flynn.boolean.careers/exercises/api/array/music")
           .then((res) => {
-            // console.log(res.data);
+            console.log(res.data);
             this.listAlbums = res.data;
           })
           .catch((err) => {
