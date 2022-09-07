@@ -1,6 +1,6 @@
 <template>
-    <div class="hello">
-      
+    <div class="hello bg-secondary">
+        io sono il contenuto
     </div>
   </template>
   
