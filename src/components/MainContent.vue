@@ -2,7 +2,7 @@
     <div class="hello bg-secondary">
        <div v-for="(poster, i) in listAlbums" :key="i"> 
            IO SONO IL CONTENUTO
-          {{poster.id}}
+          {{poster.i}}
        </div>
         
     </div>
