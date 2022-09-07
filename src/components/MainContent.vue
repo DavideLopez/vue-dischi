@@ -1,6 +1,8 @@
 <template>
     <div class="hello bg-secondary">
-        io sono il contenuto
+
+        {{ listAlbum }}
+        
     </div>
   </template>
   
@@ -12,17 +14,23 @@
     props: {
       msg: String
     },
+    data() {
+        return {
+            listAlbum: []
+        }
+    },
     created() {
         axios
           .get('https://flynn.boolean.careers/exercises/api/array/music')
           .then((res) =>{
-            console.log(res.data)
+            // console.log(res.data)
+            this.listAlbum = res.data;
           })
           .catch((err) =>{
             console.log("error", err)
           })
           .finally(() =>{
-            console.log("finito")
+            // console.log("finito")
           });
     },
   };
