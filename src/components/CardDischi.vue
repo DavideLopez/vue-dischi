@@ -25,11 +25,14 @@
 <style lang="scss" scoped>
 
 .card {
-  background-color: #65528D;
+  background-color: #212529;
   padding: 15px;
   border-radius: 0;
   .card-content {
     text-align: center;
+    &:hover {
+        opacity: 0.2;
+    }
     
     .album {
       font-size: 14px;
@@ -41,6 +44,10 @@
       color: gray;
       font-size: 16px;
     } 
+
+    .album {
+        font-weight: bold;
+    }
   }
 }
 </style>
