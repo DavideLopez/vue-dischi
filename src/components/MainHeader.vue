@@ -45,6 +45,14 @@ export default {
       }
     }
 
+    select {
+      border: 2px solid lime;
+      width: 200px;
+      margin-right: 100px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
 
 
 </style>
