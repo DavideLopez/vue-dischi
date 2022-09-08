@@ -17,13 +17,13 @@
       poster: String,
       title: String,
       author: String,
-      year: Number,
+      year: String,
+      genre: String,
     }
   }
   </script>
 
 <style lang="scss" scoped>
-
 .card {
   background-color: #212529;
   padding: 15px;
@@ -44,7 +44,6 @@
       color: gray;
       font-size: 16px;
     } 
-
     .album {
         font-weight: bold;
     }

@@ -1,9 +1,10 @@
 <template>
   <div class="container"> 
-    <CardDischi v-for="(disco,i) in ListAlbum" :key="i" 
+    <CardDischi v-for="(disco,i) in filteredAlbums" :key="i" 
       :poster="disco.poster"
       :title="disco.title"
       :author="disco.author"
+      :genre="disco.genre"
       :year="disco.year"
     />
   </div>
@@ -15,10 +16,30 @@ import CardDischi from './CardDischi.vue';
 
 export default {
     name: "MainComponent",
+    props: {
+      search: {
+        type: String,
+        default:'',
+      }
+    },
     data() {
         return {
             ListAlbum: [],
         };
+    },
+    computed: {
+      filteredAlbums() {
+        return this.ListAlbum.filter((el) => {
+          const genre = el.genre;
+          const find = this.search;
+
+          if(genre.includes(find)) {
+            return true;
+          }
+
+          return false;
+        }) 
+      }
     },
     created() {
         axios
@@ -36,15 +57,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  
-body {
-  --bs-body: color #1e2b3d;
 
   .container {
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    gap: 2rem;
-    max-width: 850px;
+    gap: 25px;
+    max-width: 950px;
   }
-}
+
 </style>
