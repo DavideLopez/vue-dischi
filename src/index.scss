@@ -4,9 +4,9 @@
     box-sizing: border-box;
 }
 
-#app {
-    background-color: #1e2b3d;
-}
+// #app {
+//     background-color: #1e2b3d; 
+// }
 
 ul, ol, menu {
     list-style: none;
@@ -27,3 +27,6 @@ img {
     padding: 1rem;
 }
 
+body { 
+    background-color: #1e2b3d !important;
+}

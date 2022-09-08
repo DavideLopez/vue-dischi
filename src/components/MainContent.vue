@@ -38,7 +38,7 @@ export default {
 <style scoped lang="scss">
   
 body {
-  
+  --bs-body: color #1e2b3d;
 
   .container {
     display: grid;
@@ -47,6 +47,4 @@ body {
     max-width: 850px;
   }
 }
-
-
 </style>
