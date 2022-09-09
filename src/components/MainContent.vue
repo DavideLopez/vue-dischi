@@ -60,9 +60,9 @@ export default {
 
   .container {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5,5fr);
     gap: 25px;
-    max-width: 950px;
+    max-width: 1000px;
   }
 
 </style>

@@ -9,7 +9,6 @@
             <option value="Metal">Metal</option>
             <option value="Jazz">Jazz</option>
             <option value="Pop">Pop</option>
-            <option value="all">All Albums</option>
 
           </select>
     </div>
